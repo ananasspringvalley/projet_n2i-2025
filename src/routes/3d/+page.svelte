@@ -11,10 +11,10 @@
         <div>
             <h1>Obsolescence programée</h1>
             <p>
-                la plus part des appareille électroniques produit par les grandes corporations sont conçu
-                dans la vision d'une durai de vie courte et programmer de tel sorte à réduire leur
-                duré de vie. Cela est appeler l'obsolescence programmée, cette pratique peut se faire de
-                plusieurs moyennes, que cela soit par des logiciel qui demande des composants neuf ou encore
+                la plus part des appareils électroniques produit par les grandes corporations sont conçus
+                dans la vision d'une durée de vie courte et programmés de telle sorte à réduire leur
+                durée de vie. Cela est appelé l'obsolescence programmée, cette pratique peut se faire de
+                plusieurs moyens, que cela soit par des logiciels qui demandent des composants neufs ou encore
                 des modifications sur les composants pour rendre la réparation plus difficile.
 
             </p>
@@ -29,12 +29,12 @@
         <div>
             <h1>Pollution</h1>
             <p>
-                La production des composant électroniques représente une grande partie de la pollution
-                produit dans le monde, cela a un lien avec la récolte et traitement des matières
-                première mais aussi avec la consommation des processus intermédiaire et de leur
+                La production des composants électroniques représente une grande partie de la pollution
+                produite dans le monde, cela à un lien avec la récolte et le traitement des matières
+                premières mais aussi avec la consommation des processus intermédiaire et de leur
                 utilisation. Pour information la production d'un ordinateur consomme 800 kg de
                 matières premières et leur utilisation régulière représente 125 kg de CO² par an.
-                de plus les serveurs représente une consommation de 3000L d'eau par internaute et par
+                De plus les serveurs représentent une consommation de 3000L d'eau par internaute et par
                 ans.
 
 
@@ -50,11 +50,11 @@
         <div>
             <h1>conclusion</h1>
             <p>
-                Cependant malgré tous les problèmes causés par les grandes corporations il y a
-                toujours une solution, et c'est les logiciel open source et les système
-                d'exploitation peu couteux en termes de puissances de calcule comme linux.
-                on peut encore changer nos habitudes pour passer à des méthodes libres de
-                droit et faire aux grandes corporations.
+                Cependant malgré tout les problèmes causés par les grandes corporations, il y a
+                toujours une solution, et c'est les logiciels "open source" et les systèmes
+                d'exploitation peu couteux en termes de puissance de calcul comme linux.
+                On peut encore changer nos habitudes pour passer à des méthodes libres de
+                droit et faire face aux grandes corporations.
 
             </p>
         </div>
