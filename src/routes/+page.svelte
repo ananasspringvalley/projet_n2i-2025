@@ -2,7 +2,7 @@
     <title>Home Page</title>
 </svelte:head>
 <section class="page">
-<audio id="player" src="appli1.mp3" autoplay loop></audio>
+<audio id="player" src="appli2.mp3" autoplay loop></audio>
 
     <div>
         <h1 id="titre1">Welcome to the Home Page</h1>

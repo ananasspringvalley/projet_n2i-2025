@@ -140,6 +140,8 @@
 
 </script>
 
+<audio id="player" src="appli1.mp3" autoplay loop></audio>
+
 <main>
 
     <h1 class="title" bind:this={title}>Et si une application propriétaire était une killer app ?</h1>
