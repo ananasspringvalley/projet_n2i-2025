@@ -15,9 +15,7 @@
         </div>
         <div class="sceneDroite">
             <Scene>
-            <Scene>
                 <Update/>
-            </Scene>
             </Scene>
         </div>
     </div>
