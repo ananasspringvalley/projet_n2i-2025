@@ -1,10 +1,10 @@
 <script lang="ts">
     import { extend, T} from '@threlte/core'
-    import { CameraControls, interactivity, GLTF, TransformControls } from '@threlte/extras'
+    import { interactivity, GLTF } from '@threlte/extras'
 
     // Bricks by Quaternius (https://poly.pizza/m/Tvlvh8AAbs)
 
-    extend({Text, TransformControls});
+    extend({Text});
 
     interactivity()
 
@@ -26,13 +26,6 @@
     // Laptop by Kenney (https://poly.pizza/m/GnbwSUiVty)
     const LAPTOP_URL = "/laptop.gltf" 
 </script>
-
-<T.PerspectiveCamera
-  makeDefault
-  position={[-10, 8, -10]}
->
-    <CameraControls enableZoom={false}/>
-</T.PerspectiveCamera>
 
 <T.Group>
     <GLTF
