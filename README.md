@@ -1,5 +1,7 @@
 # Pour executer
 
+Il faut avoir installé Node.js au préalable
+
 D'abord, il faut installer les packages :
 `npm i`
 
