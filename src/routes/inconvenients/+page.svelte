@@ -10,7 +10,7 @@
     <title>Les inconvenients</title>
 </svelte:head>
 
-<audio id="player" src="appli3.mp3" autoplay loop></audio>
+<audio id="player" src="..../static/appli3.mp3" autoplay loop></audio>
 
 <main>
     <div id="articles">

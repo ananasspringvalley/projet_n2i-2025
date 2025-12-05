@@ -140,7 +140,7 @@
 
 </script>
 
-<audio id="player" src="appli1.mp3" autoplay loop></audio>
+<audio id="player" src="..../static/appli1.mp3" autoplay loop></audio>
 
 <main>
 
