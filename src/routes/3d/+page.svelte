@@ -1,9 +1,9 @@
 <script lang="ts">
-    import { Canvas } from '@threlte/core'
     import Update from './scenes/Update.svelte';
-    import PcRain from './scenes/PcRain.svelte';
     
     import Scene from './scenes/Scene.svelte';
+    import Linux from './scenes/Linux.svelte';
+    import PcTrash from './scenes/PcTrash.svelte';
 </script>
 
 <main>
@@ -42,7 +42,7 @@
         </div>
         <div class="sceneGauche">
             <Scene>
-                <Update/>
+                <PcTrash/>
             </Scene>
         </div>
     </div>
@@ -60,7 +60,7 @@
         </div>
         <div class="sceneDroite">
             <Scene>
-                <Update/>
+                <Linux/>
             </Scene>
         </div>
     </div>
