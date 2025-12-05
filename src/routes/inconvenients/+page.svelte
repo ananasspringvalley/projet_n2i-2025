@@ -4,10 +4,11 @@
     import Scene from './scenes/Scene.svelte';
     import Linux from './scenes/Linux.svelte';
     import PcTrash from './scenes/PcTrash.svelte';
-
-    let inSlideshow = true;
-    let slide = 0;
 </script>
+
+<svelte:head>
+    <title>Les inconvenients</title>
+</svelte:head>
 
 <main>
     <div id="articles">
