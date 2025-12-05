@@ -21,8 +21,8 @@
 
     const POSITION_PC: Vec = [2.9, -1, -1];
 
-    const ROTATION_SCREEN: Vec = [radians(24), Math.PI, 0];
-    const POSITION_SCREEN: Vec = [-1.8, 0.1, 2];
+    const ROTATION_SCREEN: Vec = [radians(24.1), Math.PI, 0];
+    const POSITION_SCREEN: Vec = [0.2555, 0.75, 2.94];
 
     // Laptop by Kenney (https://poly.pizza/m/GnbwSUiVty)
     const LAPTOP_URL = "/laptop.gltf" 
@@ -46,46 +46,26 @@
   position={POSITION_PC}
 ></GLTF>
 
-<T.GridHelper args={[10, 10]} />
 
 <!-- L'ecran --> 
-<TransformControls
-    onmouseDown = {() => lockedCamera = true}
-    onmouseUp = {() => { 
-        lockedCamera = false;
-        }}
->
     <T.Mesh
             bind:this={mesh}
             rotation={ROTATION_SCREEN}
             position={POSITION_SCREEN}
         >
-        <T.BoxGeometry args={[2, 1, 1]} />
+        <T.BoxGeometry args={[4.555, 2.555, 0.1]} />
         <T.MeshBasicMaterial color="blue" />
     </T.Mesh>
-</TransformControls>
 
 <T.Billboard>
   <T.Mesh>
     <HTML 
-        position={[8, 0.1, 4]}
-    >
+        position={[8, 0.1, 4]}>
         <Screen></Screen>
     </HTML>
   </T.Mesh>
 </T.Billboard>
 
 <style>
-    #screen {
-        width: 100%;
-        height: 100%;
-    }
 
-    button {
-        z-index: 1;
-    }
-
-    * {
-        margin: 0;
-    }
 </style>
