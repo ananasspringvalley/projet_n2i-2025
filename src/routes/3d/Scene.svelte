@@ -2,6 +2,9 @@
     import { extend, T} from '@threlte/core'
     import { CameraControls, interactivity, GLTF, HTML, Billboard, TransformControls } from '@threlte/extras'
     import Screen from './Screen.svelte';
+    import { positionLocal } from 'three/tsl';
+
+    // Bricks by Quaternius (https://poly.pizza/m/Tvlvh8AAbs)
 
     extend({Text, Billboard, TransformControls});
 
@@ -44,26 +47,16 @@
   url={LAPTOP_URL}
   {scale}
   position={POSITION_PC}
-></GLTF>
-
-<T.GridHelper args={[10, 10]} />
-
-<!-- L'ecran --> 
-<TransformControls
-    onmouseDown = {() => lockedCamera = true}
-    onmouseUp = {() => { 
-        lockedCamera = false;
-        }}
 >
-    <T.Mesh
-            bind:this={mesh}
-            rotation={ROTATION_SCREEN}
-            position={POSITION_SCREEN}
-        >
-        <T.BoxGeometry args={[2, 1, 1]} />
+     <T.Mesh
+        bind:this={mesh}
+        rotation={ROTATION_SCREEN}
+        position={POSITION_SCREEN}
+    >
+        <T.BoxGeometry args={[2, 2, 1]} />
         <T.MeshBasicMaterial color="blue" />
     </T.Mesh>
-</TransformControls>
+</GLTF>
 
 <T.Billboard>
   <T.Mesh>
