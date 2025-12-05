@@ -14,9 +14,9 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis amet magnam commodi quos fugiat laboriosam soluta, incidunt velit quidem repudiandae, deleniti esse quia explicabo deserunt sint. Eum ab possimus hic.            </p>
         </div>
         <div class="sceneDroite">
-            <Canvas>
+            <Scene>
                 <Update/>
-            </Canvas>
+            </Scene>
         </div>
     </div>
     <div class ="containerGauche">
@@ -27,9 +27,9 @@
             </p>
         </div>
         <div class="sceneGauche">
-            <Canvas>
+            <Scene>
                 <Update/>
-            </Canvas>
+            </Scene>
         </div>
     </div>
     <div class ="containerDroite">
@@ -40,9 +40,9 @@
             </p>
         </div>
         <div class="sceneDroite">
-            <Canvas>
+            <Scene>
                 <Update/>
-            </Canvas>
+            </Scene>
         </div>
     </div>
 </main>
@@ -96,7 +96,7 @@
 
     }
 
-    :global(canvas) {
+    :global(Scene) {
         width: 100%;
         height: 100%;
     }
