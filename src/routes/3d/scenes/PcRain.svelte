@@ -1,66 +1,32 @@
 <script lang="ts">
-    import { World, RigidBody, Collider } from "@threlte/rapier";
+    import { GLTF } from '@threlte/extras';
+    import { onDestroy } from 'svelte';
 
-    import { GLTF } from '@threlte/extras'
-    import { extend, T } from "@threlte/core";
+    let yFrom = 10;
+    let y = 0;
+    let x = 0;
 
-    import { onDestroy } from "svelte";
+    let lastNow = Date.now();
+    let interval = setInterval(() => {
+        let now = Date.now();
+        let dt = (now-lastNow)/1000
 
-    // Trashcan Small by Quaternius (https://poly.pizza/m/i7HDuYDLkx)
+        x += dt;
 
-    extend({World});
-
-    const LIFETIME: number = 10;
-
-    let id = 0
-
-    let positions: {[key: number]: [number, number, number]}
-
-    type Computer = {
-        position: [number, number, number],
-        time: number,
-    }
-    let computers: Computer[] = $state([]);
-
-    let spawnInterval = setInterval(() => {
-        computers.forEach(pc => {
-            pc.time -= 1;
-        })
-
-        for (let ind = computers.length-1; ind >= 0; ind--) {
-            let pc = computers[ind];
-            pc.time -= 1;
-
-            if (pc.time < 0) {
-                computers.splice(ind, 1);
-            }
+        if (x >= 1) {
+            x = 0;
         }
 
-        const new_pc: Computer[] = [{position: [0, 10, 0], time: LIFETIME}];
+        y = (1-x)*yFrom;
 
-        computers = new_pc.concat(computers);
-
-    }, 500);
+        lastNow = now;
+    }, 0);
 
     onDestroy(() => {
-        clearInterval(spawnInterval);
+        clearInterval(interval);
     })
-
 </script>
 
-<GLTF url="./trashcan.glb" scale={10}></GLTF>
 
-<!-- <div>
-    <T.Group position={computer.position}>
-        <RigidBody type="dynamic" oncreate={() => {console.log("Created!")}}>
-            <Collider 
-                contactForceEventThreshold={30}
-                restitution={0.4}
-                shape="ball"
-                args={[0.5]}
-            >
-            <GLTF url="./laptop.gltf" scale={5}></GLTF>
-            </Collider>
-        </RigidBody>
-    </T.Group>
-</div> -->
+<GLTF position={[0, -4, 0]} url="./trashcan.glb" scale={10}></GLTF>
+<GLTF position={[1, y, -0.5]} url="./laptop.gltf" scale={7}></GLTF>

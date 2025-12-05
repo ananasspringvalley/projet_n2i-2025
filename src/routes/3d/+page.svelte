@@ -15,7 +15,9 @@
         </div>
         <div class="sceneDroite">
             <Scene>
+            <Scene>
                 <Update/>
+            </Scene>
             </Scene>
         </div>
     </div>
@@ -28,7 +30,7 @@
         </div>
         <div class="sceneGauche">
             <Scene>
-                <Update/>
+                <PcRain/>
             </Scene>
         </div>
     </div>
@@ -40,9 +42,9 @@
             </p>
         </div>
         <div class="sceneDroite">
-            <Scene>
+            <!-- <Scene>
                 <Update/>
-            </Scene>
+            </Scene> -->
         </div>
     </div>
 </main>
