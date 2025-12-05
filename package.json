@@ -23,10 +23,8 @@
 		"vite": "^7.2.2"
 	},
 	"dependencies": {
-		"@dimforge/rapier3d-compat": "^0.19.3",
 		"@threlte/core": "^8.3.1",
 		"@threlte/extras": "^9.7.1",
-		"@threlte/rapier": "^3.2.0",
 		"three": "^0.181.2"
 	}
 }
