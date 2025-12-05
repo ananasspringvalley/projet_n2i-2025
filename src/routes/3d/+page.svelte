@@ -67,6 +67,10 @@
 </main>
 
 <style>
+    h1 {
+        color: yellow;
+    }
+
     .containerDroite {
         background-color: #1a1a2e;
         display: flex;
@@ -88,27 +92,24 @@
     }
 
     .sceneDroite {
-        width: 860px;
+        width: 1260px;
         height: 400px;
 
-        border: 2px solid black;
         border-radius: 10px;
 
         margin-left: 20px;
     }
 
     .sceneGauche {
-        width: 860px;
+        width: 1260px;
         height: 400px;
 
-        border: 2px solid black;
         border-radius: 10px;
 
         margin-right: 20px;
     }
 
     main {
-        height: 100%;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: #0f3460;
         color: #eee;
