@@ -25,6 +25,8 @@
 	"dependencies": {
 		"@threlte/core": "^8.3.1",
 		"@threlte/extras": "^9.7.1",
+		"@types/howler": "^2.2.12",
+		"howler": "^2.2.4",
 		"three": "^0.181.2"
 	}
 }
