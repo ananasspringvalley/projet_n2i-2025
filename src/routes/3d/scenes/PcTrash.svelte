@@ -2,6 +2,7 @@
     import { GLTF } from '@threlte/extras';
     import { onDestroy } from 'svelte';
     import { easeInQuad } from '../../../utils';
+    import { MODEL_LAPTOP, MODEL_TRASHCAN } from '../../../assets';
 
 
     const SPEED = 0.5;

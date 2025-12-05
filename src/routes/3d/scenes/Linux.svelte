@@ -4,6 +4,8 @@
     import { onDestroy } from 'svelte';
     import { radians } from '../../../utils';
 
+    import { MODEL_PINGUIN } from "../../../assets";
+
     extend({Text});
 
     interactivity()

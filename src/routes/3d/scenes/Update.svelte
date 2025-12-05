@@ -3,6 +3,7 @@
     import { interactivity, GLTF, Text } from '@threlte/extras'
     import { onDestroy } from 'svelte';
     import { radians, type Vec } from '../../../utils';
+    import { MODEL_LAPTOP } from '../../../assets';
 
     extend({Text});
 
