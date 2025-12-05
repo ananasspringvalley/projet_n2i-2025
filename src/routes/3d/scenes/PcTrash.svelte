@@ -2,14 +2,20 @@
     import { GLTF } from '@threlte/extras';
     import { onDestroy } from 'svelte';
 
-    let yFrom = 10;
+    function easeInQuad(x: number): number {
+        return x * x;
+    }
+
+    const SPEED = 0.5;
+
+    let yFrom = 6;
     let y = 0;
     let x = 0;
 
     let lastNow = Date.now();
     let interval = setInterval(() => {
         let now = Date.now();
-        let dt = (now-lastNow)/1000
+        let dt = (now-lastNow)/1000 * SPEED
 
         x += dt;
 
@@ -17,7 +23,7 @@
             x = 0;
         }
 
-        y = (1-x)*yFrom;
+        y = (1-easeInQuad(x))*yFrom;
 
         lastNow = now;
     }, 0);
