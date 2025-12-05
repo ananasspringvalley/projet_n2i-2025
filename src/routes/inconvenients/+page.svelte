@@ -4,6 +4,24 @@
     import Scene from './scenes/Scene.svelte';
     import Linux from './scenes/Linux.svelte';
     import PcTrash from './scenes/PcTrash.svelte';
+
+    import {Howl, Howler} from 'howler';
+
+    let requestedMusic = false;
+
+    var music = new Howl({
+        src: ['/music.mp3'],
+        loop: true,
+        volume: 0.2,
+    });
+
+    function playMusic(val: boolean) {
+        if (val) {
+            music.play();
+        }
+
+        requestedMusic = true;
+    }
 </script>
 
 <svelte:head>
@@ -13,6 +31,19 @@
 <audio id="player" src="..../static/appli3.mp3" autoplay loop></audio>
 
 <main>
+    {#if !requestedMusic}
+        <div id="musicRequestContainer">
+            <div id="musicRequest">
+                <p>Voulez vous jouer de la musique?</p>
+                
+                <div id="requestButtons">
+                    <button onclick={() => playMusic(true)}>Oui</button>
+                    <button onclick={() => playMusic(false)}>Non</button>
+                </div>
+            </div> 
+        </div>
+    {/if}
+
     <div id="articles">
         <div class="article">
             <div class="contents">
@@ -75,6 +106,45 @@
 </main>
 
 <style>
+    #musicRequestContainer {
+        position: absolute;
+
+        width: 100%;
+    }
+
+    #requestButtons {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #musicRequest {
+        width: max-content;
+
+        margin-left: auto;
+        margin-right: auto;
+        padding: 12px;
+
+        background-color: #1a1a2e;
+        border-radius: 12px;
+        border: 4px solid #0f3460;
+
+        animation-name: popup;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+
+    @keyframes popup {
+        from {
+            margin-top: -100%;
+        }
+
+        to {
+            margin-top: 0px;
+        }
+    }
+
     h1 {
         color: yellow;
     }
