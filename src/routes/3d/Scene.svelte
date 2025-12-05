@@ -2,6 +2,9 @@
     import { extend, T} from '@threlte/core'
     import { CameraControls, interactivity, GLTF, HTML, Billboard, TransformControls } from '@threlte/extras'
     import Screen from './Screen.svelte';
+    import { positionLocal } from 'three/tsl';
+
+    // Bricks by Quaternius (https://poly.pizza/m/Tvlvh8AAbs)
 
     extend({Text, Billboard, TransformControls});
 
