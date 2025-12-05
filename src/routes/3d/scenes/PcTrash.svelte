@@ -1,10 +1,8 @@
 <script lang="ts">
     import { GLTF } from '@threlte/extras';
     import { onDestroy } from 'svelte';
+    import { easeInQuad } from '../../../utils';
 
-    function easeInQuad(x: number): number {
-        return x * x;
-    }
 
     const SPEED = 0.5;
 
@@ -34,5 +32,5 @@
 </script>
 
 
-<GLTF position={[0, -4, 0]} url="./trashcan.glb" scale={10}></GLTF>
-<GLTF position={[1, y, -0.5]} url="./laptop.gltf" scale={7}></GLTF>
+<GLTF position={[0, -4, 0]} url={MODEL_TRASHCAN} scale={10}></GLTF>
+<GLTF position={[1, y, -0.5]} url={MODEL_LAPTOP} scale={7}></GLTF>
