@@ -1,7 +1,7 @@
 <script lang="ts">
     import { Canvas, extend, T} from '@threlte/core'
     import { CameraControls, TransformControls } from '@threlte/extras'
-    
+
     extend({TransformControls});
 </script>
 
@@ -11,6 +11,7 @@
     <T.PerspectiveCamera
     makeDefault
     position={[-10, 8, -10]}
+    
     >
         <CameraControls enableZoom={false}/>
     </T.PerspectiveCamera>

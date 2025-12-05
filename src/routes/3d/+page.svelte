@@ -4,64 +4,69 @@
     import Scene from './scenes/Scene.svelte';
     import Linux from './scenes/Linux.svelte';
     import PcTrash from './scenes/PcTrash.svelte';
+
+    let inSlideshow = true;
+    let slide = 0;
 </script>
 
 <main>
-    <div class ="containerDroite">
-        <div>
-            <h1>Obsolescence programée</h1>
-            <p>
-                la plus part des appareils électroniques produit par les grandes corporations sont conçus
-                dans la vision d'une durée de vie courte et programmés de telle sorte à réduire leur
-                durée de vie. Cela est appelé l'obsolescence programmée, cette pratique peut se faire de
-                plusieurs moyens, que cela soit par des logiciels qui demandent des composants neufs ou encore
-                des modifications sur les composants pour rendre la réparation plus difficile.
-
-            </p>
+    <div id="articles">
+        <div class="article">
+            <div>
+                <h1>Obsolescence programée</h1>
+                <p>
+                    la plus part des appareils électroniques produit par les grandes corporations sont conçus
+                    dans la vision d'une durée de vie courte et programmés de telle sorte à réduire leur
+                    durée de vie. Cela est appelé l'obsolescence programmée, cette pratique peut se faire de
+                    plusieurs moyens, que cela soit par des logiciels qui demandent des composants neufs ou encore
+                    des modifications sur les composants pour rendre la réparation plus difficile.
+    
+                </p>
+            </div>
+            <div class="scene">
+                <Scene>
+                    <Update/>
+                </Scene>
+            </div>
         </div>
-        <div class="sceneDroite">
-            <Scene>
-                <Update/>
-            </Scene>
+        <div class ="article inverse">
+            <div>
+                <h1>Pollution</h1>
+                <p>
+                    La production des composants électroniques représente une grande partie de la pollution
+                    produite dans le monde, cela à un lien avec la récolte et le traitement des matières
+                    premières mais aussi avec la consommation des processus intermédiaire et de leur
+                    utilisation. Pour information la production d'un ordinateur consomme 800 kg de
+                    matières premières et leur utilisation régulière représente 125 kg de CO² par an.
+                    De plus les serveurs représentent une consommation de 3000L d'eau par internaute et par
+                    ans.
+    
+    
+                </p>
+            </div>
+            <div class="scene">
+                <Scene>
+                    <PcTrash/>
+                </Scene>
+            </div>
         </div>
-    </div>
-    <div class ="containerGauche">
-        <div>
-            <h1>Pollution</h1>
-            <p>
-                La production des composants électroniques représente une grande partie de la pollution
-                produite dans le monde, cela à un lien avec la récolte et le traitement des matières
-                premières mais aussi avec la consommation des processus intermédiaire et de leur
-                utilisation. Pour information la production d'un ordinateur consomme 800 kg de
-                matières premières et leur utilisation régulière représente 125 kg de CO² par an.
-                De plus les serveurs représentent une consommation de 3000L d'eau par internaute et par
-                ans.
-
-
-            </p>
-        </div>
-        <div class="sceneGauche">
-            <Scene>
-                <PcTrash/>
-            </Scene>
-        </div>
-    </div>
-    <div class ="containerDroite">
-        <div>
-            <h1>conclusion</h1>
-            <p>
-                Cependant malgré tout les problèmes causés par les grandes corporations, il y a
-                toujours une solution, et c'est les logiciels "open source" et les systèmes
-                d'exploitation peu couteux en termes de puissance de calcul comme linux.
-                On peut encore changer nos habitudes pour passer à des méthodes libres de
-                droit et faire face aux grandes corporations.
-
-            </p>
-        </div>
-        <div class="sceneDroite">
-            <Scene>
-                <Linux/>
-            </Scene>
+        <div class ="article">
+            <div>
+                <h1>Conclusion</h1>
+                <p>
+                    Cependant malgré tout les problèmes causés par les grandes corporations, il y a
+                    toujours une solution, et c'est les logiciels "open source" et les systèmes
+                    d'exploitation peu couteux en termes de puissance de calcul comme linux.
+                    On peut encore changer nos habitudes pour passer à des méthodes libres de
+                    droit et faire face aux grandes corporations.
+    
+                </p>
+            </div>
+            <div class="scene">
+                <Scene>
+                    <Linux/>
+                </Scene>
+            </div>
         </div>
     </div>
 </main>
@@ -71,36 +76,31 @@
         color: yellow;
     }
 
-    .containerDroite {
+    .article {
+        padding: 8px;
         background-color: #1a1a2e;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
 
-        margin: 10px;
+        flex-wrap: wrap;
     }
 
-    .containerGauche {
-        background-color: #1a1a2e;
+    #articles {
         display: flex;
+        flex-direction: column;
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .inverse {
         flex-direction: row-reverse;
-        align-items: center;
-        justify-content: space-around;
-
-        margin: 10px;
     }
 
-    .sceneDroite {
-        width: 1260px;
-        height: 400px;
-
-        border-radius: 10px;
-
-        margin-left: 20px;
-    }
-
-    .sceneGauche {
+    .scene {
+        min-width: 100%;
+        min-height: 100%;
         width: 1260px;
         height: 400px;
 
@@ -110,13 +110,16 @@
     }
 
     main {
+        width: 100%;
+        min-height: 100%;
+
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: #0f3460;
         color: #eee;
 
     }
 
-    :global(Scene) {
+    :global(canvas) {
         width: 100%;
         height: 100%;
     }

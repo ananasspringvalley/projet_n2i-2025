@@ -2,7 +2,6 @@
     import { extend, T} from '@threlte/core'
     import { interactivity, GLTF, Text } from '@threlte/extras'
     import { onDestroy } from 'svelte';
-    import { textureLevel } from 'three/tsl';
 
     // Bricks by Quaternius (https://poly.pizza/m/Tvlvh8AAbs)
 

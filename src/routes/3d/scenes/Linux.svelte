@@ -9,13 +9,11 @@
 
     interactivity()
 
-    type Vec = [number, number, number]
+    const SPEED = 0.1;
 
     function radians(deg: number): number {
         return deg/360*Math.PI*2
     }
-    
-    let scale = 0.08;
 
     // Laptop by Kenney (https://poly.pizza/m/GnbwSUiVty)
     const PENGUIN_URL = "linux.glb" 
@@ -23,7 +21,7 @@
     let deg = 0;
 
     let rotateInterval = setInterval(() => {
-        deg = (deg + 1) % 360;
+        deg = (deg + SPEED) % 360;
     }, 0);
 
     onDestroy(() => {
