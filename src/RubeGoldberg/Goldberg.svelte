@@ -4,6 +4,7 @@
     let title: HTMLHeadingElement;
     let text: HTMLParagraphElement;
     let button: HTMLButtonElement;
+    let homeButton: HTMLButtonElement;
     let indice = 0
     let cls = "texte"
 
@@ -86,6 +87,7 @@
 
     function init() {
         button.innerHTML = 'Vous connecter';
+        homeButton.style.display = "none"
         text.innerHTML = (
             'Une application propriétaire est une application dont le code est privé, et, en conséquence, accessible, et modifiable, uniquement par l\'entité qui le possède. ' +
             'En conséquence, plongeons nous dans le cas absurde ou une fonctionnalité simple serait gérée uniquement de manière propriétaire. ' +
@@ -106,6 +108,7 @@
             indice++
         } else if (indice>34) {
             button.style.display = "none"
+            homeButton.style.display = "flex"
             text.innerHTML = tableauTexte[indice]
         } else {
             text.innerHTML = tableauTexte[indice]
@@ -148,6 +151,8 @@
 
     <button class={cls} bind:this={button} onclick={next}> bouton </button>
 
+    <button id="Accueil" bind:this={homeButton}><a href="/">Retour à l'accueil</a></button>
+
 </main>
 
 <style>
@@ -156,6 +161,7 @@ main {
     display : flex ;
     flex-direction: column ;
     justify-content: center ;
+    padding : 5rem ;
 }
 button {
     width : fit-content ;
@@ -174,6 +180,12 @@ button {
     display: flex;
     text-align: center;
     justify-content: center;
+    margin-bottom: 2rem ;
+}
+#Accueil {
+    width : fit-content ;
+    margin-left: auto ;
+    margin-right: auto ;
 }
 
 </style>
