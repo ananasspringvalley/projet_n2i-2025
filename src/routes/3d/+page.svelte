@@ -46,6 +46,7 @@
 
 <style>
     .containerDroite {
+        background-color: #1a1a2e;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -55,6 +56,7 @@
     }
 
     .containerGauche {
+        background-color: #1a1a2e;
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -85,6 +87,9 @@
 
     main {
         height: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #0f3460;
+        color: #eee;
 
     }
 
@@ -92,5 +97,5 @@
         width: 100%;
         height: 100%;
     }
-    
+
 </style>
