@@ -4,7 +4,7 @@
 
 </script>
 
-<div id="screen">
+<div>
  
 </div>
 
