@@ -4,6 +4,7 @@
     import PcRain from './scenes/PcRain.svelte';
     
     import Scene from './scenes/Scene.svelte';
+    import Linux from './scenes/linux.svelte';
 </script>
 
 <main>
@@ -40,9 +41,9 @@
             </p>
         </div>
         <div class="sceneDroite">
-            <!-- <Scene>
-                <Update/>
-            </Scene> -->
+            <Scene>
+                <Linux/>
+            </Scene>
         </div>
     </div>
 </main>
