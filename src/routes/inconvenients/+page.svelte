@@ -4,15 +4,18 @@
     import Scene from './scenes/Scene.svelte';
     import Linux from './scenes/Linux.svelte';
     import PcTrash from './scenes/PcTrash.svelte';
-
-    let inSlideshow = true;
-    let slide = 0;
 </script>
+
+<svelte:head>
+    <title>Les inconvenients</title>
+</svelte:head>
+
+<audio id="player" src="..../static/appli3.mp3" autoplay loop></audio>
 
 <main>
     <div id="articles">
         <div class="article">
-            <div>
+            <div class="contents">
                 <h1>Obsolescence programée</h1>
                 <p>
                     la plus part des appareils électroniques produit par les grandes corporations sont conçus
@@ -30,7 +33,7 @@
             </div>
         </div>
         <div class ="article inverse">
-            <div>
+            <div class="contents">
                 <h1>Pollution</h1>
                 <p>
                     La production des composants électroniques représente une grande partie de la pollution
@@ -51,7 +54,7 @@
             </div>
         </div>
         <div class ="article">
-            <div>
+            <div class="contents">
                 <h1>Conclusion</h1>
                 <p>
                     Cependant malgré tout les problèmes causés par les grandes corporations, il y a
@@ -83,8 +86,10 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+    }
 
-        flex-wrap: wrap;
+    .contents {
+        max-width: 60%;
     }
 
     #articles {
@@ -99,10 +104,8 @@
     }
 
     .scene {
-        min-width: 100%;
-        min-height: 100%;
-        width: 1260px;
-        height: 400px;
+        width: 30%;
+        max-width: 480px;
 
         border-radius: 10px;
 
@@ -122,6 +125,17 @@
     :global(canvas) {
         width: 100%;
         height: 100%;
+    }
+
+    @media (max-width: 600px) {
+        .article {
+            flex-direction: column;
+        }
+
+        .scene {
+            width: 100%;
+            height: 100%;
+        }
     }
 
 </style>

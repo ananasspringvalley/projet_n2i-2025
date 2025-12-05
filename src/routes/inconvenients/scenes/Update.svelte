@@ -2,18 +2,12 @@
     import { extend, T} from '@threlte/core'
     import { interactivity, GLTF, Text } from '@threlte/extras'
     import { onDestroy } from 'svelte';
-
-    // Bricks by Quaternius (https://poly.pizza/m/Tvlvh8AAbs)
+    import { radians, type Vec } from '../../../utils';
+    import { MODEL_LAPTOP } from '../../../assets';
 
     extend({Text});
 
     interactivity()
-
-    type Vec = [number, number, number]
-
-    function radians(deg: number): number {
-        return deg/360*Math.PI*2
-    }
 
     let mesh;
     
@@ -33,9 +27,6 @@
     const OFFSET_Y_TEXT = -0.4;
     const SCALE_TEXT = 3;
 
-    // Laptop by Kenney (https://poly.pizza/m/GnbwSUiVty)
-    const LAPTOP_URL = "/laptop.gltf"
-
     const LINES = ["Votre ordinateur est", "incompatible pour les", "mises à jour!"]
 
     let blink = true;
@@ -54,7 +45,7 @@
     scale={2}
 >
     <GLTF
-      url={LAPTOP_URL}
+      url={MODEL_LAPTOP}
       {scale}
       position={POSITION_PC}
     ></GLTF>
